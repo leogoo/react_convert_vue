@@ -1,24 +1,23 @@
 <template>
   <div>
-    <h1>vue项目内组件</h1>
-    <!-- <MyForm /> -->
-    <h1>react组件库内组件</h1>
+    <el-button type="">click</el-button>
     <SimpleForm />
   </div>
 </template>
 
-<script>
-import MyForm from './components/MyForm.vue';
-import { SimpleForm } from 'react-components';
+<script lang="ts">
+import { Button, Input } from 'antd';
+import { ReactInVue, VueInReact } from 'vuera';
+import { SimpleForm} from "react-components";
 
 export default {
-    components: {
-      components: {
-        MyForm,
-      }
-    }
+  components: {
+    SimpleForm: ReactInVue(SimpleForm)
   }
+}
+
 </script>
 
 <style scoped>
+
 </style>

@@ -1,7 +1,12 @@
 import { defineConfig } from 'vite';
-import { createVuePlugin} from 'vite-plugin-vue2'
-import reactRefresh from '@vitejs/plugin-react-refresh';
+import vue from '@vitejs/plugin-vue2';
+import vueJsx from '@vitejs/plugin-vue2-jsx';
 
-export default defineConfig({
-  plugins: [createVuePlugin(), reactRefresh()],
-});
+export default defineConfig(() => {
+  return {
+    plugins: [
+      vue(),
+      vueJsx(),
+    ]
+  }
+})
