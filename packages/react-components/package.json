@@ -1,8 +1,14 @@
 {
-  "name": "react-demo",
+  "name": "react-components",
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "main": "./dist/react-components.cjs.js",
+  "module": "./dist/react-components.es.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
@@ -10,10 +16,12 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@rollup/plugin-typescript": "^11.1.2",
+    "@types/node": "^20.4.1",
     "antd": "^5.6.4",
     "react": "^18.2.0",
-    "react-components": "workspace: *",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "tslib": "^2.6.0"
   },
   "devDependencies": {
     "@types/react": "^18.2.14",

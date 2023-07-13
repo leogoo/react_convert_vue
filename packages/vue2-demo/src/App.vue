@@ -1,33 +1,24 @@
 <template>
-  <div class="form_container">
-    <el-form :model="formInline">
-      <el-form-item label="vue input">
-        <el-input v-model="formInline.input" placeholder=""></el-input>
-      </el-form-item>
-      <el-button type="primary" @click="onSubmit">click</el-button>
-    </el-form>
+  <div>
+    <h1>vue项目内组件</h1>
+    <!-- <MyForm /> -->
+    <h1>react组件库内组件</h1>
+    <SimpleForm />
   </div>
 </template>
 
-<script lang="ts">
+<script>
+import MyForm from './components/MyForm.vue';
+import { SimpleForm } from 'react-components';
+
 export default {
-    data() {
-      return {
-        formInline: {
-          input: '',
-        }
-      }
-    },
-    methods: {
-      onSubmit() {
-        console.log(this.formInline.input);
+    components: {
+      components: {
+        MyForm,
       }
     }
   }
 </script>
 
 <style scoped>
-.form_container {
-  width: 300px;
-}
 </style>
